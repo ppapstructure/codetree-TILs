@@ -11,3 +11,5 @@ if is_magic_number(n):
     print("Yes")
 else:
     print("No")
+
+# 각 자리수의 합을 구하는 로직을 생각하는데 오래걸림
