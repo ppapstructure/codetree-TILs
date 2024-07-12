@@ -8,7 +8,7 @@ def multiple(a,c):
     print(f'{a} * {c} = {a*c}')
 
 def divide(a,c):
-    print(f'{a} / {c} = {a/c}')
+    print(f'{a} / {c} = {a//c}')
 
 a,o,c = tuple(input().split())
 a = int(a)
