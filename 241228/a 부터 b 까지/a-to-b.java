@@ -16,12 +16,12 @@ public class Main {
         while(true) {
             if (i%2 == 0) {
                 i += 3;
-                if (i>13) break;
+                if (i>b) break;
                 else System.out.print(i+" ");
             }
             else if (i%2 == 1) {
                 i *= 2;
-                if (i>13) break;
+                if (i>b) break;
                 else System.out.print(i+" ");
             }
         }
