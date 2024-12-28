@@ -9,8 +9,15 @@ public class Main {
         a = sc.nextInt();
         b = sc.nextInt();
 
-        for(int i = b;i>=a;i--) {
-            System.out.print(i+" ");
+        if (a<=b) {
+            for(int i = b;i>=a;i--) {
+                System.out.print(i+" ");
+            }
+        }
+        else {
+            for(int i = a;i>=b;i--) {
+                System.out.print(i+" ");
+            }
         }
     }
 }
