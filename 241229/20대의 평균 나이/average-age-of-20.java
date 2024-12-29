@@ -12,7 +12,7 @@ public class Main {
 
     while(true) {
         n = sc.nextInt();
-        if(n>=30) break;
+        if(n>29||n<20) break;
         sumVal += n;
         cnt++;
     }
