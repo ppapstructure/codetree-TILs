@@ -20,7 +20,7 @@ public class Main {
         }
 
         avg = (double)sum / cnt;
-        System.out.print(sum + " " + avg);
+        System.out.printf("%d %.1f",sum,avg);
 
     }
 }
