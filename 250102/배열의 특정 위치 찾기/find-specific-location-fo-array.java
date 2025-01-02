@@ -15,7 +15,7 @@ public class Main {
 
             if(i%2==1) sum+=arr[i];
 
-            if(arr[i]%3==0) {
+            if((i+1)%3==0) {
                 sum_o += arr[i];
                 cnt++;
                 // System.out.printf("%d ,, %d\n",arr[i], cnt);
