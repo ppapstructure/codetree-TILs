@@ -15,7 +15,7 @@ public class Main {
             countArr[a%b]++;
             a=temp;
 
-            if(a==0) break;
+            if(a<=1) break;
         }
 
         int sum=0;
