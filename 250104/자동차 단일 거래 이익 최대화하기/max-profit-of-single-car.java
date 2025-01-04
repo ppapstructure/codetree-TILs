@@ -22,6 +22,19 @@ public class Main {
                 idx_min = i;
             }
         }
+        // System.out.println(minVal);
+
+        // 최솟값이 배열에 끝에 나온다면 그 다음으로 작은 최솟값을 구한다.
+        if (idx_min == n-1) {
+            int ne = idx_min;
+            minVal = arr[0];
+            for(int i = 0;i<ne;i++) {
+                if(arr[i]<minVal) {
+                    minVal = arr[i];
+                    idx_min = i;
+                }
+            }
+        }
 
         // 최대 이익 구하기
         for(int i = idx_min+1;i<n;i++) {
@@ -30,7 +43,8 @@ public class Main {
             }
         }
 
-        if(maxVal == 0) {
+
+        if(maxVal-minVal <= 0) {
             System.out.print(0);
         }
         else {
