@@ -20,10 +20,13 @@ public class Main {
                 System.out.println(str);
             }
             else if (n==3) {
-                for(int j = len-1;j>=0;j--) {
-                    System.out.print(str.charAt(j));
+                char[] arr = str.toCharArray();
+                char[] temp = new char[len];
+                for(int j=len-1;j>=0;j--) {
+                    temp[len-j-1] = arr[j];
                 }
-                System.out.println();
+                str = String.valueOf(temp);
+                System.out.println(str);
             }
 
         }
