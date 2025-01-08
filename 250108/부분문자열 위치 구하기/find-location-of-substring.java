@@ -10,13 +10,22 @@ public class Main {
         int lenT = t.length();
         int cnt = 0;
 
-        // substring
-        for(int i = 0;i<n-lenT+1;i++) {
-            if(str.substring(i,i+lenT).equals(t)) cnt++;
-        }
+        System.out.print(str.indexOf(t));
 
-        if(cnt>0) System.out.print(cnt);
-        else System.out.print(-1);
+        // if(str.contains(t)) {
+        //     System.out.print(str.indexOf(t));
+        // }else{
+        //     System.out.print(-1);
+        // }
+
+
+        // // substring
+        // for(int i = 0;i<n-lenT+1;i++) {
+        //     if(str.substring(i,i+lenT).equals(t)) cnt++;
+        // }
+
+        // if(cnt>0) System.out.print(cnt);
+        // else System.out.print(-1);
 
     }
 }
