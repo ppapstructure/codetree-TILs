@@ -1,3 +1,4 @@
+// 빡구현으로 풀기
 import java.util.Scanner;
 
 public class Main {
@@ -9,23 +10,36 @@ public class Main {
         int n = str.length();
         int lenT = t.length();
         int cnt = 0;
+        boolean exists = false;
+        int idx = -1;
 
-        System.out.print(str.indexOf(t));
+        // System.out.print(str.indexOf(t));
 
-        // if(str.contains(t)) {
-        //     System.out.print(str.indexOf(t));
-        // }else{
-        //     System.out.print(-1);
-        // }
-
-
-        // // substring
+        // substring
         // for(int i = 0;i<n-lenT+1;i++) {
         //     if(str.substring(i,i+lenT).equals(t)) cnt++;
         // }
 
         // if(cnt>0) System.out.print(cnt);
         // else System.out.print(-1);
+
+        for(int i = 0;i<n-lenT+1;i++) {
+            boolean allSame = true;
+
+            for(int j = 0;j<lenT;j++) {
+                if(str.charAt(i+j) != t.charAt(j)) allSame = false;
+            }
+
+            if(allSame) {
+                exists = true;
+                idx = i;
+                break;
+            }
+
+        }
+
+        System.out.print(idx);
+
 
     }
 }
