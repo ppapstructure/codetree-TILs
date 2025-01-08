@@ -10,7 +10,7 @@ public class Main {
             int len = str.length();
             int n = sc.nextInt();
 
-            if(n>len) {
+            if(n>=len) {
                 str = str.substring(0,len-1);
                 System.out.println(str);
             }
