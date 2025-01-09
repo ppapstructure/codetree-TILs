@@ -11,7 +11,7 @@ public class Main {
             if('A'<=str.charAt(i) && str.charAt(i)<='Z') {
                 System.out.print((char)(str.charAt(i) + 'a'-'A'));   
             }
-            else if ('a'<=str.charAt(i) && str.charAt(i)<='z'||'1'<=str.charAt(i) && str.charAt(i)<='9'){
+            else if ('a'<=str.charAt(i) && str.charAt(i)<='z'||'0'<=str.charAt(i) && str.charAt(i)<='9'){
                 System.out.print(str.charAt(i));
             }
         }
