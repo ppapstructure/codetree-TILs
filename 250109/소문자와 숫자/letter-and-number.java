@@ -8,7 +8,7 @@ public class Main {
         int len = str.length();
 
         for(int i = 0;i<len;i++) {
-            if('A'<=str.charAt(i) && str.charAt(i)<'Z') {
+            if('A'<=str.charAt(i) && str.charAt(i)<='Z') {
                 System.out.print((char)(str.charAt(i) + 'a'-'A'));   
             }
             else if ('a'<=str.charAt(i) && str.charAt(i)<='z'||'1'<=str.charAt(i) && str.charAt(i)<='9'){
