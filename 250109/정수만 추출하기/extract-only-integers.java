@@ -8,7 +8,7 @@ public class Main {
         String B = sc.next();
         
         int lenA = A.length();
-        int lenB = A.length();
+        int lenB = B.length();
 
         for(int i=0;i<lenA;i++) {
             if('0'<=A.charAt(i) && A.charAt(i)<='9') {
