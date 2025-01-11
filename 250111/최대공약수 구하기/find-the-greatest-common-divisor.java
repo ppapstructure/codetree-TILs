@@ -15,11 +15,12 @@ public class Main {
         }
 
         while(true) {
+
+            if(a%b==0) break;
+
             temp = a%b;
             a = b;
             b = temp;
-
-            if(a%b==0) break;
         }
 
         return b;
