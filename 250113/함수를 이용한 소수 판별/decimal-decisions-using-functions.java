@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class Main {
     public static boolean isPrime(int n) {
+        // 완벽한 소수 판별을 위해 이정도 예외케이스는 알아두었어야함.
         if (n==1) return false;
 
         for(int i = 2;i<n;i++) {
