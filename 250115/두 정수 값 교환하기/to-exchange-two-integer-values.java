@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 class IntWrapper {
     int value;
 
@@ -7,6 +6,7 @@ class IntWrapper {
         this.value = value;
     }
 }
+
 
 public class Main {
     public static void swap(IntWrapper n, IntWrapper m) {
@@ -16,16 +16,22 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        // Please write your code here.
         Scanner sc = new Scanner(System.in);
-        int a = sc.nextInt();
-        int b = sc.nextInt();
+        int n = sc.nextInt();
+        int m = sc.nextInt();
 
-        IntWrapper n = new IntWrapper(a);
-        IntWrapper m = new IntWrapper(b);
+        // java의 경우 int값을 그대로 넘겨 swap을 기대하기는 어렵기에
+        // IntWrapper라는 객체를 만들어 넘기는 방식으로 해결합니다.
+        IntWrapper nWrap = new IntWrapper(n);
+        IntWrapper mWrap = new IntWrapper(m);
 
-        swap(n,m);
+        swap(nWrap, mWrap);
 
-        System.out.print(n.value + " " + m.value);
+        // 교환 이후 값을 다시 넣어줍니다.
+        n = nWrap.value;
+        m = mWrap.value;
+
+        System.out.print(n+" "+m);
     }
+
 }
