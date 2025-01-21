@@ -9,6 +9,8 @@ public class Main {
         char[] chars = str.toCharArray();
         Arrays.sort(chars);
         String sortedStr = new String(chars);
-        System.out.println(sortedStr);
+
+        System.out.print(sortedStr);
+
     }
 }
