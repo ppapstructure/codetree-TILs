@@ -13,19 +13,30 @@ public class Main {
         String[] strs = new String[n];
         String[] sorted_str = new String[MAX_N];
         
-
+        // 문자열 입력
         for(int i = 0;i<n;i++)
             strs[i] = sc.next();
 
-
-        int idx=0;
+        // 문자열 T로 시작하는 단어들만 솎아내자
+        int idx = 0;
         for(int i = 0;i<n;i++) {
-            if(strs[i].contains(T)) {
+            boolean same = true;
+            for(int j = 0;j<T.length();j++) {
+                if(strs[i].charAt(j) != T.charAt(j)) {
+                    same = false;
+                    break;
+                }
+            }
+            if (same) {
                 sorted_str[idx++] = strs[i];
             }
-        }
+        }        
 
-        Arrays.sort(sorted_str, Comparator.nullsLast(String::compareTo));
+        Arrays.sort(sorted_str,Comparator.nullsLast(String::compareTo));
+
+        // for(int i = 0;i<5;i++) {
+        //     System.out.println(sorted_str[i]);
+        // }
 
         System.out.print(sorted_str[2]);
     }
