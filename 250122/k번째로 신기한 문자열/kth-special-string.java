@@ -38,6 +38,6 @@ public class Main {
         //     System.out.println(sorted_str[i]);
         // }
 
-        System.out.print(sorted_str[2]);
+        System.out.print(sorted_str[k-1]);
     }
 }
