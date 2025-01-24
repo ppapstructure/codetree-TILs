@@ -15,14 +15,17 @@ class Information {
 public class Main {
 
     public static boolean compareString(String str1, String str2) {
-        int minlen = str1.length()>str2.length()?str1.length():str2.length();
+        int minlen = str1.length()>str2.length()?str2.length():str1.length();
 
+        // System.out.println(minlen);
         for(int i = 0;i<minlen;i++) {
             if(str1.charAt(i)<str2.charAt(i)) 
                 return true;
+            else if(str1.charAt(i)<str2.charAt(i))
+                return false;
         }
 
-        return false;
+        return str1.length()<str2.length();
     }
 
     public static void main(String[] args) {
