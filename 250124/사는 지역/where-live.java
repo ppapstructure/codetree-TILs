@@ -13,6 +13,18 @@ class Information {
 } 
 
 public class Main {
+
+    public static boolean compareString(String str1, String str2) {
+        int minlen = str1.length()>str2.length()?str1.length():str2.length();
+
+        for(int i = 0;i<minlen;i++) {
+            if(str1.charAt(i)<str2.charAt(i)) 
+                return true;
+        }
+
+        return false;
+    }
+
     public static void main(String[] args) {
         // Please write your code here.
         Scanner sc = new Scanner(System.in);
@@ -29,9 +41,15 @@ public class Main {
 
         int max_idx = 0;
         // 1. compareTo() 적용
+        // for(int i = 0;i<n;i++) {
+        //     if(information[max_idx].name.compareTo(information[i].name)<0)
+        //         max_idx = i;
+        // }
+
+
         // 2. compareTo() 없이 함수로 비교해서 풀어보기
         for(int i = 0;i<n;i++) {
-            if(information[max_idx].name.compareTo(information[i].name)<0)
+            if(compareString(information[max_idx].name, information[i].name))
                 max_idx = i;
         }
 
