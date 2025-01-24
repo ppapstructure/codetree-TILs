@@ -14,19 +14,35 @@ class Information {
 
 public class Main {
 
+    // public static boolean compareString(String str1, String str2) {
+    //     int minlen = str1.length()>str2.length()?str2.length():str1.length();
+
+    //     // System.out.println(minlen);
+    //     for(int i = 0;i<minlen;i++) {
+    //         if(str1.charAt(i)<str2.charAt(i)) 
+    //             return true;
+    //         else if(str1.charAt(i)<str2.charAt(i))
+    //             return false;
+    //     }
+
+    //     return str1.length()<str2.length();
+    // }
+
     public static boolean compareString(String str1, String str2) {
-        int minlen = str1.length()>str2.length()?str2.length():str1.length();
+    int minlen = Math.min(str1.length(), str2.length());
 
-        // System.out.println(minlen);
-        for(int i = 0;i<minlen;i++) {
-            if(str1.charAt(i)<str2.charAt(i)) 
-                return true;
-            else if(str1.charAt(i)<str2.charAt(i))
-                return false;
+    for(int i = 0; i < minlen; i++) {
+        if (str1.charAt(i) < str2.charAt(i)) {
+            return true;  // str1이 더 작은 경우
+        } else if (str1.charAt(i) > str2.charAt(i)) {
+            return false; // str1이 더 큰 경우
         }
-
-        return str1.length()<str2.length();
+        // 같으면 다음 문자 비교
     }
+    // 여기까지 왔다는 것은 앞쪽 부분이 모두 같음
+    // 길이가 더 짧으면 lexicographically 더 작은 것으로 보고 true 반환
+    return str1.length() < str2.length();
+}
 
     public static void main(String[] args) {
         // Please write your code here.
