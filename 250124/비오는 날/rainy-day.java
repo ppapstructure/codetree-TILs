@@ -62,11 +62,21 @@ public static boolean func(String date1, String date2) {
             }
         }
 
+        // // 함수를 쓰는 경우
+        // for(int i = 0;i<n;i++) {
+        //     if(data[i].weather.equals("Rain")) {
+        //         // i가 idx보다 더 빠른 일자일경우 idx에 대입.
+        //         if(func(data[idx].date,data[i].date)) {
+        //             idx = i;
+        //         }
+        //     }
+        // }
 
+        // compareTo이용
         for(int i = 0;i<n;i++) {
             if(data[i].weather.equals("Rain")) {
                 // i가 idx보다 더 빠른 일자일경우 idx에 대입.
-                if(func(data[idx].date,data[i].date)) {
+                if(data[idx].date.compareTo(data[i].date)>0) {
                     idx = i;
                 }
             }
