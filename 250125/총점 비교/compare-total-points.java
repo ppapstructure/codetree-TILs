@@ -2,7 +2,7 @@ import java.util.Scanner;
 import java.util.Arrays;
 import java.util.Comparator;
 
-class Student {
+class Student implements Comparable<Student> {
     String name;
     int kor, eng, math;
 
@@ -11,6 +11,14 @@ class Student {
         this.kor = kor;
         this.eng = eng;
         this.math = math;
+    }
+
+    @Override
+    public int compareTo(Student s) {
+        int Asum = this.kor + this.eng + this.math;
+        int Bsum = s.kor + s.eng + s.math;
+
+        return Asum - Bsum;
     }
 
 }
@@ -32,16 +40,17 @@ public class Main {
             students[i] = new Student(name, kor, eng, math);
         }
 
-        Arrays.sort(students, new Comparator<Student>(){
-            @Override
-            public int compare(Student a, Student b) {
-                int Asum = a.kor + a.eng + a.math;
-                int Bsum = b.kor + b.eng + b.math;
+        // Arrays.sort(students, new Comparator<Student>(){
+        //     @Override
+        //     public int compare(Student a, Student b) {
+        //         int Asum = a.kor + a.eng + a.math;
+        //         int Bsum = b.kor + b.eng + b.math;
 
-                return Asum - Bsum;
-            }
-        });
+        //         return Asum - Bsum;
+        //     }
+        // });
 
+        Arrays.sort(students);
 
         for(int i = 0;i<n;i++) {
             System.out.printf("%s %d %d %d\n",students[i].name
